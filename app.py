@@ -1,18 +1,16 @@
 import streamlit as st
-import pandas as pd
-import numpy as np
 
-st.title("My First Streamlit App")
-st.write("Welcome to your ML app!")
+st.set_page_config(page_title="Iris K-Means", page_icon="🌸")
 
-name = st.text_input("Enter your name:")
+st.title("🌸 Iris K-Means Clustering App")
+st.markdown(
+    """
+    Welcome! This app demonstrates **unsupervised clustering** of the Iris dataset
+    using the **K-Means algorithm**.
 
-if name:
-    st.write(f"Hello, {name}!")
-
-data = pd.DataFrame({
-    "x": np.arange(50),
-    "y": np.random.randn(50)
-})
-
-st.line_chart(data.set_index("x"))
+    Use the main app (`machine.py`) to:
+    - Predict which cluster a new flower belongs to
+    - Explore cluster visualizations
+    - View model metrics and statistics
+    """
+)
